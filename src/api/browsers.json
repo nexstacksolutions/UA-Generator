@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Chrome",
+    "engine": "AppleWebKit/537.36 (KHTML, like Gecko)",
+    "versionRange": [80, 115],
+    "extra": "Safari/537.36"
+  },
+  {
+    "name": "Firefox",
+    "engine": "Gecko/20100101",
+    "versionRange": [60, 115],
+    "extra": "Firefox/{version}"
+  },
+  {
+    "name": "Safari",
+    "engine": "AppleWebKit/605.1.15 (KHTML, like Gecko)",
+    "versionRange": [13, 16],
+    "extra": "Version/{safariVersion} Safari/605.1.15"
+  },
+  {
+    "name": "Edge",
+    "engine": "AppleWebKit/537.36 (KHTML, like Gecko)",
+    "versionRange": [80, 115],
+    "extra": "Chrome/{version} Safari/537.36"
+  }
+]

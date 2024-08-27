@@ -1,0 +1,132 @@
+@keyframes flash-msg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.user-agent-generator {
+  width: 100%;
+  gap: var(--spacing-xl);
+
+  & h1 {
+    padding: 0 var(--spacing-xl);
+  }
+
+  & .action-btns {
+    width: 100%;
+    justify-content: center;
+    gap: var(--spacing-md);
+
+    & .generate-btns {
+      gap: var(--spacing-md);
+    }
+  }
+
+  & .user-agent-list {
+    width: 100%;
+    text-align: start;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 2%;
+    row-gap: var(--spacing-md);
+    overflow-y: scroll;
+    max-height: 40rem;
+
+    & li {
+      width: 22%;
+
+      p {
+        line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        margin-right: var(--spacing-sm);
+      }
+
+      & .copy-btn {
+        background-color: #4caf50;
+        color: var(--btn-color);
+        border: none;
+        border-radius: var(--border-radius-sm);
+        padding: var(--spacing-xs) var(--spacing-sm);
+        cursor: pointer;
+        font-size: var(--font-size-sm);
+        transition: background-color var(--transition-duration);
+
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  & .flash-status {
+    position: absolute;
+    top: 10rem;
+    right: var(--spacing-xl);
+    font-size: var(--font-size-base);
+    color: green;
+    animation: flash-msg 0.2s ease;
+
+    &.success {
+      color: #155724;
+    }
+
+    &.error {
+      color: #721c24;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .user-agent-generator {
+    & .user-agent-list li {
+      width: 32%;
+    }
+
+    & .flash-status {
+      top: 9rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .user-agent-generator {
+    padding-top: 14vh;
+
+    & .action-btns {
+      flex-wrap: wrap;
+      gap: var(--spacing-xl);
+
+      & .generate-btns {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    & .user-agent-list li {
+      width: 48%;
+    }
+
+    & .flash-status {
+      right: 50%;
+      transform: translateX(50%);
+      top: 8rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .user-agent-generator .user-agent-list li {
+    width: 100%;
+  }
+}

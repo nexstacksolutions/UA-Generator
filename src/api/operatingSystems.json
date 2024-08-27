@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Windows NT 10.0",
+    "type": "desktop",
+    "versionRange": null
+  },
+  {
+    "name": "Windows NT 6.1",
+    "type": "desktop",
+    "versionRange": null
+  },
+  {
+    "name": "Macintosh; Intel Mac OS X {version}",
+    "type": "desktop",
+    "versionRange": [10.1, 10.15]
+  },
+  {
+    "name": "X11; Linux x86_64",
+    "type": "desktop",
+    "versionRange": null
+  },
+  {
+    "name": "Android {version}",
+    "type": "mobile",
+    "versionRange": [6, 12]
+  },
+  {
+    "name": "iPhone; CPU iPhone OS {version} like Mac OS X",
+    "type": "mobile",
+    "versionRange": [10, 16]
+  }
+]
