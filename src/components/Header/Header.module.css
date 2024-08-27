@@ -1,15 +1,15 @@
-.site-header {
+.siteHeader {
   width: 100%;
-  background-color: var(--header-bg-color);
-  padding: var(--spacing-md) var(--spacing-md);
-  color: var(--heading-color);
+  background-color: var(--secondary-bg);
+  padding: var(--spacing-md);
+  color: var(--primary-color);
   box-shadow: var(--shadow-md);
 
-  & .container-left {
-    gap: var(--font-size-lg);
+  & .containerLeft {
+    gap: var(--font-lg);
 
-    & .site-logo h1 {
-      font-size: var(--font-size-lg);
+    & .siteLogo h1 {
+      font-size: var(--font-lg);
       margin: 0;
     }
 
@@ -17,9 +17,9 @@
       gap: var(--spacing-md);
 
       & a {
-        color: var(--heading-color);
+        color: var(--primary-color);
         text-decoration: none;
-        font-weight: var(--font-weight-bold);
+        font-weight: var(--weight-bold);
 
         &:hover {
           color: #535bf2;
@@ -28,19 +28,19 @@
     }
   }
 
-  & .header-btns svg {
+  & .headerBtns svg {
     cursor: pointer;
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .site-header {
+  .siteHeader {
     & nav {
       display: none;
     }
 
-    & .header-btns {
+    & .headerBtns {
       align-items: center;
       justify-content: center;
       gap: var(--spacing-md);

@@ -1,4 +1,4 @@
-import "./Header.css";
+import styles from "./Header.module.css";
 import useUA from "../../context/UAContext";
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileNavigation from "./mobileNav/mobileNav";
@@ -9,9 +9,9 @@ const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { toggleGenerator } = useUA();
   return (
-    <header className="site-header row">
-      <div className="container-left row">
-        <div className="site-logo">
+    <header className={`${styles.siteHeader} row`}>
+      <div className={`${styles.containerLeft} row`}>
+        <div className={styles.siteLogo}>
           <h1>UA Generator</h1>
         </div>
         <nav className="row">
@@ -23,7 +23,7 @@ const Header = () => {
         </nav>
       </div>
       <MobileNavigation isNavOpen={isNavOpen} />
-      <div className="header-btns row">
+      <div className={`${styles.headerBtns} row`}>
         <button onClick={toggleGenerator}>Toggle Generator</button>
         <AiOutlineMenu onClick={() => setIsNavOpen((prev) => !prev)} />
       </div>

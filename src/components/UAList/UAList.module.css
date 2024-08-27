@@ -1,0 +1,61 @@
+.UAList {
+  width: 100%;
+  text-align: start;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 2%;
+  row-gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-xl);
+  overflow-y: auto;
+  max-height: 40rem;
+
+  & li {
+    width: 22%;
+
+    & p {
+      line-clamp: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      margin-right: var(--spacing-sm);
+    }
+
+    & .copyBtn {
+      background-color: #4caf50;
+      color: var(--secondary-color);
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      cursor: pointer;
+      font-size: var(--font-sm);
+      transition: var(--transition-base);
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .UAList li {
+    width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .UAList li {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .UAList li {
+    width: 100%;
+  }
+}

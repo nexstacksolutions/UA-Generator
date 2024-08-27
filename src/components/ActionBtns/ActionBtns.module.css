@@ -1,0 +1,21 @@
+.actionBtns {
+  width: 100%;
+  justify-content: center;
+  gap: var(--spacing-md);
+
+  & .generateBtns {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .actionBtns {
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+
+    & .generateBtns {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

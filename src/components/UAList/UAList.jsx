@@ -1,12 +1,16 @@
+import styles from "./UAList.module.css";
 import { memo } from "react";
 
 const UAList = memo(({ userAgents, copyToClipboard }) => {
   return (
-    <ul className="user-agent-list row">
+    <ul className={`${styles.UAList} row`}>
       {userAgents.map((ua, index) => (
         <li className="row" key={index}>
           <p>{ua}</p>
-          <button className="copy-btn" onClick={() => copyToClipboard(ua)}>
+          <button
+            className={styles.copyBtn}
+            onClick={() => copyToClipboard(ua)}
+          >
             Copy
           </button>
         </li>

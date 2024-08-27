@@ -1,4 +1,4 @@
-import "./UAGenerator.css";
+import styles from "./UAGenerator.module.css";
 import useUA from "../../context/UAContext";
 import { saveAs } from "file-saver";
 import { utils, write } from "xlsx";
@@ -112,7 +112,7 @@ function UAGenerator() {
   );
 
   return (
-    <main className="user-agent-generator col">
+    <main className={`${styles.UAGenerator} col`}>
       <h1>Random User-Agent Generator</h1>
 
       <ActionBtns
@@ -127,7 +127,9 @@ function UAGenerator() {
       <UAList userAgents={userAgents} copyToClipboard={copyTextToClipboard} />
 
       {status.isVisible && (
-        <div className={`flash-status ${status.type}`}>{status.message}</div>
+        <div className={`${styles.flashStatus} ${styles[status.type]}`}>
+          {status.message}
+        </div>
       )}
     </main>
   );

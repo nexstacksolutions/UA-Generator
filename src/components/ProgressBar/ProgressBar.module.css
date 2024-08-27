@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   height: 5px;
-  background-color: var(--sub-heading-color);
+  background-color: var(--secondary-bg);
   z-index: 399;
   overflow: hidden;
 

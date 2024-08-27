@@ -1,13 +1,13 @@
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="footer-content text-center">
+    <footer className={styles.siteFooter}>
+      <div className={`${styles.footerContent} text-center`}>
         <p>
           &copy; {new Date().getFullYear()} UA Generator. All rights reserved.
         </p>
-        <ul className="footer-links row">
+        <ul className={`${styles.footerLinks} row`}>
           <li>
             <a href="#privacy">Privacy Policy</a>
           </li>
@@ -18,6 +18,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

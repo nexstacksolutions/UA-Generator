@@ -6,7 +6,7 @@
   left: 0;
   z-index: 90;
   padding: var(--spacing-sm) var(--spacing-lg);
-  background-color: var(--mobile-nav-bg-color);
+  background-color: var(--primary-rgb);
   backdrop-filter: blur(16px);
   transition: all 0.5s ease-in-out;
 
@@ -27,17 +27,17 @@
         justify-content: center;
 
         & svg {
-          font-size: 2.4rem;
+          font-size: var(--font-xl);
         }
       }
 
       & .label {
-        font-size: var(----font-size-sm);
+        font-size: var(--font-sm);
       }
     }
 
     & .navLinkActive {
-      color: white;
+      color: var(--primary-color);
     }
   }
 

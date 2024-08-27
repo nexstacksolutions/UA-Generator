@@ -1,3 +1,4 @@
+import styles from "./ActionBtns.module.css";
 import React, { memo, useState, useEffect } from "react";
 
 const ActionBtns = memo((props) => {
@@ -25,8 +26,8 @@ const ActionBtns = memo((props) => {
   }, []);
 
   return (
-    <div className="action-btns row">
-      <div className="generate-btns row">
+    <div className={`${styles.actionBtns} row`}>
+      <div className={`${styles.generateBtns} row`}>
         <input
           type="text"
           name="ua-generator"
@@ -40,11 +41,11 @@ const ActionBtns = memo((props) => {
         <button onClick={props.generateUserAgent}>{buttonText}</button>
       </div>
 
-      <button className="download-btn" onClick={props.downloadExcel}>
+      <button className={styles.downloadBtn} onClick={props.downloadExcel}>
         Download as Excel
       </button>
       <button
-        className="copy-all-btn"
+        className={styles.copyAllBtn}
         onClick={() => props.copyAllToClipboard(null)}
       >
         Copy All

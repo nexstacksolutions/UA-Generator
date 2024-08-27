@@ -1,0 +1,53 @@
+@keyframes flash-msg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.UAGenerator {
+  width: 100%;
+  gap: var(--spacing-xl);
+
+  & h1 {
+    padding: 0 var(--spacing-xl);
+  }
+
+  & .flashStatus {
+    position: absolute;
+    top: 10rem;
+    right: var(--spacing-xl);
+    font-size: var(--font-base);
+    color: green;
+    animation: flash-msg 0.2s ease;
+
+    &.success {
+      color: #155724;
+    }
+
+    &.error {
+      color: #721c24;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .UAGenerator .flashStatus {
+    top: 9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .UAGenerator {
+    padding-top: 14vh;
+
+    & .flashStatus {
+      right: 50%;
+      transform: translateX(50%);
+      top: 8rem;
+    }
+  }
+}
