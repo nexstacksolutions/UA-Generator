@@ -22,7 +22,7 @@ export const UAProvider = ({ children }) => {
   }, []);
 
   const toggleGenerator = React.useCallback(() => {
-    displayStatus("this option remove from admin", "success");
+    displayStatus("this option remove from admin", "error");
   }, [displayStatus]);
 
   const values = React.useMemo(
